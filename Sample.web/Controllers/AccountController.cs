@@ -35,6 +35,7 @@ namespace Sample.web.Controllers
                     claims.Add(new Claim(ClaimTypes.NameIdentifier, loginViewModel.UserName));
                     // id doc details like as adahr card details, user roles
                     claims.Add(new Claim(ClaimTypes.Name, loginViewModel.UserName));
+                    claims.Add(new Claim(ClaimTypes.Role, "Admin"));
                     // how to validate like as cookie , jwt token
                     ClaimsIdentity identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     // declaring authetication type like as use adhar card to validate
